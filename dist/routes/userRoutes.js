@@ -6,7 +6,7 @@ const router = Router();
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 
-router.get('/profile', verifyToken,isAdmin, getUserDetails);
+router.get('/profile', verifyToken, getUserDetails);
 
 router.put('/approve/:userId', verifyToken, isAdmin, approveUser);
 
